@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  $numbers = range(0, 100, 3);
+  foreach ($numbers as $number) {
+    echo 'the number is ' . $number . '<br>';
+  }
+    //dd($numbers);
 });
 
 /**
