@@ -14,9 +14,18 @@
 Route::get('/', function () {
   $numbers = range(0, 100, 3);
   foreach ($numbers as $number) {
-    echo 'the number is ' . $number . '<br>';
+    switch ($number) {
+      case 3:
+        echo "Three <br>";
+        break;
+      case 9:
+        echo str_repeat("Nine <br>", 3);
+        break;
+      case 15:
+        echo str_repeat("Fifteen <br>", 5);
+        break;
+    }
   }
-    //dd($numbers);
 });
 
 /**
