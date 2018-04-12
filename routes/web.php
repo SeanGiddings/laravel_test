@@ -11,24 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    $numbers = range(0, 100, 3);
-    $i = 0;
-    do {
-        if ($numbers[$i] % 7 == 0 && $numbers[$i] != 0) {
-            echo 'Sevens are lucky, this number has ' . ($numbers[$i] / 7) . '<br>';
-        } elseif ($numbers[$i] % 10 == 0 && $numbers[$i] != 0) {
-            echo $numbers[$i] . ' is a round number <br>';
-        }
-
-        if ($numbers[$i] == reset($numbers)) {
-            echo 'First number <br>';
-        } elseif ($numbers[$i] == end($numbers)) {
-            echo 'Last number';
-        }
-        $i++;
-    } while ($i < count($numbers)) ;
-});
+Route::get('/', 'HomeController@index');
 
 /**
  * Healthcheck to ensure the application is healthy.  When deployed this endpoint will determine healthy nodes
