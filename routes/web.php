@@ -13,16 +13,16 @@
 
 Route::get('/', function () {
     $numbers = range(0, 100, 3);
-    foreach ($numbers as $number) {
-        if ($number % 7 == 0 && $number != 0) {
-            echo 'Sevens are lucky, this number has ' . ($number / 7) . '<br>';
-        } elseif ($number % 10 == 0 && $number != 0) {
-            echo $number . ' is a round number <br>';
+    for ($i = 0; $i < count($numbers); $i++) {
+        if ($numbers[$i] % 7 == 0 && $numbers[$i] != 0) {
+            echo 'Sevens are lucky, this number has ' . ($numbers[$i] / 7) . '<br>';
+        } elseif ($numbers[$i] % 10 == 0 && $numbers[$i] != 0) {
+            echo $numbers[$i] . ' is a round number <br>';
         }
 
-        if ($number == reset($numbers)) {
+        if ($numbers[$i] == reset($numbers)) {
             echo 'First number <br>';
-        } elseif ($number == end($numbers)) {
+        } elseif ($numbers[$i] == end($numbers)) {
             echo 'Last number';
         }
     }
