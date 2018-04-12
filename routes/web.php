@@ -14,7 +14,7 @@
 Route::get('/', function () {
     $numbers = range(0, 100, 3);
     $i = 0;
-    while ($i < count($numbers)) {
+    do {
         if ($numbers[$i] % 7 == 0 && $numbers[$i] != 0) {
             echo 'Sevens are lucky, this number has ' . ($numbers[$i] / 7) . '<br>';
         } elseif ($numbers[$i] % 10 == 0 && $numbers[$i] != 0) {
@@ -27,7 +27,7 @@ Route::get('/', function () {
             echo 'Last number';
         }
         $i++;
-    }
+    } while ($i < count($numbers)) ;
 });
 
 /**
