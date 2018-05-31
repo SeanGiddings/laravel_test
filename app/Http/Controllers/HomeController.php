@@ -6,32 +6,17 @@ class HomeController
 {
     public function index()
     {
-        // function add($a, $b)
-        // {
-        //     return $a + $b;
-        // }
-        function subtract(&$numberOne, $numberTwo)
+        function comparison($a, $b, $c = false)
         {
-            $numberOne = 20;
-            $numberOne = $numberOne - $numberTwo;
-            // return $c - $d;
+            if ($c && $a === $b) {
+                return "whats up";
+            } elseif ($a != $b) {
+                return "the parameters are NOT equal.";
+            } elseif ($a == $b) {
+                return "The parameters are equal!";
+            }
         }
-        // function multiply($a, $b)
-        // {
-        //     return $a * $b;
-        // }
-        // function divide($a, $b)
-        // {
-        //     return $a / $b;
-        // }
-        $testVariable = 1;
-        $testVariable2 = 34;
-        // print add($testVariable, 3) . '<br>';
-        subtract($testVariable, $testVariable2) . '<br>';
-        echo $testVariable;
-        // echo $testVariable;
-        // echo $testVariable2;
-        // print multiply(6, 11) . '<br>';
-        // print divide(25, 5) . '<br>';
+
+        print comparison(5, 5, true);
     }
 }
