@@ -17,6 +17,9 @@ class HomeController
             }
         }
 
-        print comparison(5, 5, true);
+        print comparison(4, '4') . "<br>";
+        print comparison(5, '5', true) . "<br>";
+        print comparison(4, 4.0) . "<br>";
+        print comparison(5, 5.0, true) . "<br>";
     }
 }
