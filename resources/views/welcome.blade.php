@@ -78,9 +78,10 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                    @foreach ($titles as $title)
+                      <div class="title m-b-md">
+                        <p> {{ $title }} </p>
+                    @endforeach
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
